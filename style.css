@@ -1,12 +1,4 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
-}
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
-}
 
 form {
     display: flex;
@@ -19,20 +11,26 @@ h1 {
     display: flex;
     justify-content: center;
 }
+
 hr {
     width: 95%;
     margin: 0 auto;
 }
-#wholePage {
-    display: flex;
-}
+
 #form-container {
-    display: flex;
-    flex-direction: column;
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    padding-left: 0;
 }
-form{
+
+form {
     margin-top: 20px;
 }
+
+body {
+    color: white;
+}
+
 #coffees{
     display: flex;
     /*flex-direction: column;*/
@@ -45,7 +43,16 @@ form{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    align-items: flex-start;
     /*border: 1px solid black;*/
     width: 50%;
+}
+
+#background-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -9;
 }

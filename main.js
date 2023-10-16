@@ -49,7 +49,14 @@ function addCoffee(e) {
     localStorage.setItem('storedCoffees', JSON.stringify(coffees));
 }
 
-
+function resetMenu(e) {
+    e.preventDefault();
+    localStorage.clear();
+    while (coffees.length > 14) {
+        coffees.pop();
+    }
+    updateCoffees(e);
+}
 
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
@@ -81,7 +88,7 @@ tbody.innerHTML = renderCoffees(coffees);
 
 coffee_selection.addEventListener("keyup", updateCoffees);
 roastSelection.addEventListener("change", updateCoffees);
-
+document.querySelector("#reset-btn").addEventListener("click", resetMenu);
 newSubmit.addEventListener('click',addCoffee);
 submitButton.addEventListener('click', updateCoffees);
 

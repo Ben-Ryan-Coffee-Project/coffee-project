@@ -44,12 +44,16 @@ function addCoffee(e) {
         roast: newRoast
     }
     coffees.push(newCoffee);
-    console.log(coffees);
     updateCoffees(e);
+
+    localStorage.setItem('storedCoffees', JSON.stringify(coffees));
 }
 
+
+
+
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
-let coffees = [
+let coffees = localStorage.getItem('storedCoffees') ? JSON.parse(localStorage.getItem('storedCoffees')) :  [
     {id: 1, name: 'Light City', roast: 'light'},
     {id: 2, name: 'Half City', roast: 'light'},
     {id: 3, name: 'Cinnamon', roast: 'light'},
@@ -66,6 +70,7 @@ let coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
+
 let tbody = document.querySelector('#coffees');
 let submitButton = document.querySelector('#submit');
 let roastSelection = document.querySelector('#roast-selection');
@@ -79,3 +84,5 @@ roastSelection.addEventListener("change", updateCoffees);
 
 newSubmit.addEventListener('click',addCoffee);
 submitButton.addEventListener('click', updateCoffees);
+
+

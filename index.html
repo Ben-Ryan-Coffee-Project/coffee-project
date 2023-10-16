@@ -3,24 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Coffee!</h1>
+	<hr>
 
-    <form id="search-form">
-        <label for="roast-selection">Roast</label>
-        <select id="roast-selection">
-            <option value="light">light</option>
-            <option value="medium">medium</option>
-            <option value="dark">dark</option>
-        </select>
-        <label for="coffee-name">Coffee Name</label>
-        <input type="text" id="coffee-name">
-        <input id="submit" type="submit">
-    </form>
-
-    <table>
+	<div id="wholePage">
+		<div id="form-container" class="container">
+			<form id="search-form">
+				<h2 class="align-self-center">Search Coffees</h2>
+				<label for="roast-selection">Roast</label>
+				<select id="roast-selection">
+					<option value="light">light</option>
+					<option value="medium">medium</option>
+					<option value="dark">dark</option>
+					<option value="all">all</option>
+				</select>
+				<label for="coffee-name">Coffee Name</label>
+				<input type="text" id="coffee-name">
+				<input id="submit" type="submit">
+			</form>
+			<form id="add-a-coffee">
+				<h2 class="align-self-center">Add a Coffee</h2>
+				<label for="roast-selection">Roast</label>
+				<select id="new-roast">
+					<option value="light">light</option>
+					<option value="medium">medium</option>
+					<option value="dark">dark</option>
+				</select>
+				<label for="new-name">Coffee Name</label>
+				<input type="text" id="new-name">
+				<input id="new-submit" type="submit">
+			</form>
+		</div>
+		<div id="table" class="container">
+<!--   			 <table>-->
 <!--        <thead>-->
 <!--&lt;!&ndash;            <tr>&ndash;&gt;-->
 <!--&lt;!&ndash;&lt;!&ndash;                <th>ID</th>&ndash;&gt;&ndash;&gt;-->
@@ -28,9 +47,15 @@
 <!--&lt;!&ndash;&lt;!&ndash;                <th>ROAST</th>&ndash;&gt;&ndash;&gt;-->
 <!--&lt;!&ndash;            </tr>&ndash;&gt;-->
 <!--        </thead>-->
-        <tbody id="coffees"></tbody>
-    </table>
-
+				
+					<div id="coffees" class="container flex-wrap"></div>
+<!--			</table>-->
+		</div>
+			
+	</div>
+	
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="main.js"></script>
 </body>
 </html>
+

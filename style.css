@@ -8,8 +8,44 @@ td, th {
     padding: 5px 10px;
 }
 
-#search-form {
+form {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    padding: 0;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+}
+hr {
+    width: 95%;
+    margin: 0 auto;
+}
+#wholePage {
+    display: flex;
+}
+#form-container {
+    display: flex;
+    flex-direction: column;
+}
+form{
+    margin-top: 20px;
+}
+#coffees{
+    display: flex;
+    /*flex-direction: column;*/
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.coffee {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    /*border: 1px solid black;*/
+    width: 50%;
 }

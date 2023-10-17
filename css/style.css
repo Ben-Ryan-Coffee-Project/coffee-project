@@ -1,4 +1,7 @@
-
+@font-face {
+    font-family: "SFEspressoShack";
+    src: url("SFEspressoShackCondensed.ttf");
+}
 
 form {
     display: flex;
@@ -10,6 +13,13 @@ form {
 h1 {
     display: flex;
     justify-content: center;
+    font-family: "SFEspressoShack", "Sans-Serif";
+    font-size: 5rem;
+    letter-spacing: .2rem;
+}
+
+h2 {
+    font-family: "SFEspressoShack", "Sans-Serif";
 }
 
 hr {
@@ -18,8 +28,6 @@ hr {
 }
 
 #form-container {
-    /*display: flex;*/
-    /*flex-direction: column;*/
     padding-left: 0;
 }
 
@@ -33,7 +41,6 @@ body {
 
 #coffees{
     display: flex;
-    /*flex-direction: column;*/
     justify-content: space-between;
     flex-wrap: wrap;
     margin-top: 20px;
@@ -44,7 +51,6 @@ body {
     flex-direction: column;
     flex-wrap: wrap;
     align-items: flex-start;
-    /*border: 1px solid black;*/
     width: 50%;
 }
 
@@ -60,4 +66,14 @@ body {
 #reset-btn {
     width: 55%;
     margin: 30px auto;
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .heading-wrapper {
+        text-align: center;
+    }
 }

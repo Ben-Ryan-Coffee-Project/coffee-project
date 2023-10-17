@@ -59,6 +59,7 @@
 
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
+    // Assign locally stored list of coffees if available, default menu otherwise
     let coffees = localStorage.getItem('storedCoffees') ? JSON.parse(localStorage.getItem('storedCoffees')) : [
         {id: 1, name: 'Light City', roast: 'light'},
         {id: 2, name: 'Half City', roast: 'light'},
